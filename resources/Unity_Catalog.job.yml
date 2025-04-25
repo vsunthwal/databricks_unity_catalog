@@ -5,13 +5,13 @@ resources:
 
       email_notifications:
         on_failure:
-          - plahari@microsoft.com
+          - valinisunthwal2003@gmail.com
 
       tasks:
         - task_key: notebook_task
           job_cluster_key: job_cluster
           notebook_task:
-            notebook_path: /Workspace/Users/plahari@microsoft.com/Unity_catalog/notebook.ipynb  # Correct path to the notebook in Databricks workspace
+            notebook_path: /Workspace/Users/valinisunthwal2003@gmail.com/Unity_catalog/notebook.ipynb  # Correct path to the notebook in Databricks workspace
 
       job_clusters:
         - job_cluster_key: job_cluster
