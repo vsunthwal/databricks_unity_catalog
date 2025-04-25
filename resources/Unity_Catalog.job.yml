@@ -1,0 +1,23 @@
+resources:
+  jobs:
+    Unity_Catalog_job:
+      name: Unity_Catalog_job
+
+      email_notifications:
+        on_failure:
+          - plahari@microsoft.com
+
+      tasks:
+        - task_key: notebook_task
+          job_cluster_key: job_cluster
+          notebook_task:
+            notebook_path: /Workspace/Users/plahari@microsoft.com/Unity_catalog/notebook.ipynb  # Correct path to the notebook in Databricks workspace
+
+      job_clusters:
+        - job_cluster_key: job_cluster
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            node_type_id: Standard_D3_v2
+            autoscale:
+              min_workers: 1
+              max_workers: 4
